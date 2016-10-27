@@ -1,3 +1,88 @@
-<view>
-    <text>这是一个新的页面</text>
+<view class="container" style="overflow-x:hidden;">
+    <view class="list-wrap tc-wrap detail">
+        <image class="anchor-pic" src="{{avatarUrl}}"></image>
+        <view class="media-bd">
+            <view class="name">隔壁老王</view>
+            <text class="context">这是一个详细页这是一个详细页这是一个详细页这是一个详细页这是一个详细页</text>
+            <view class="pic-wrap tc-clearfix">
+                <block wx:for="{{item.pic}}" wx:for-item="pic" >
+                    <image src="{{pic}}"  mode="aspectFill" class="pic-item count-{{item.pic.length}}"></image>
+                </block>
+            </view>
+            <view class="bottom-wrap">
+                <text class="time">{{item.time}}</text>
+                <text class="delete" wx:if="{{item.myself}}" catchtap="modalTap">删除</text>
+                <view class="ctrl" catchtap="ctrlShow">
+                    <icon class="icon-comment"/>
+                    <view class="ctrl-box {{item.ctrlShow? 'ant' : '' }}">
+                        <view class="item">赞</view>
+                        <view class="item">评论</view>
+                    </view>
+                </view>
+            </view>
+        </view>                     
+    </view> 
+
+    <view class="common-box bottom-line">
+        <icon class="icon icon-praise"/>
+        <view class="praise-box tc-clearfix">
+            <image class="anchor-pic" src="../../img/default.png"></image>
+            <image class="anchor-pic" src="../../img/default.png"></image>
+            <image class="anchor-pic" src="../../img/default.png"></image>
+            <image class="anchor-pic" src="../../img/default.png"></image>
+            <image class="anchor-pic" src="../../img/default.png"></image>
+            <image class="anchor-pic" src="../../img/default.png"></image>
+            <image class="anchor-pic" src="../../img/default.png"></image>
+            <image class="anchor-pic" src="../../img/default.png"></image>
+            <image class="anchor-pic" src="../../img/default.png"></image>
+            <image class="anchor-pic" src="../../img/default.png"></image>
+        </view>
+    </view>
+    <view class="common-box">
+        <icon class="icon icon-comment"/>
+        <view class="replay-box">
+
+            <view class="replay tc-wrap">
+                <image class="anchor-pic" src="../../img/default.png"></image>
+                <text class="time">2016-06-12 12:45</text>
+                <view class="media-bd">
+                    <view class="name top-name">隔壁老王隔壁老王隔壁老王隔壁老王隔壁老王隔壁老王</view>
+                    <view class="replay-text">
+                        <text class="static">回复</text>
+                        <text class="name">福尔摩皮</text>：
+                        <text class="context">福尔摩皮</text>
+                    </view>
+                </view>
+            </view>  
+
+            <view class="replay tc-wrap">
+                <image class="anchor-pic" src="../../img/default.png"></image>
+                <text class="time">2016-06-12 12:45</text>
+                <view class="media-bd">
+                    <view class="name top-name">隔壁老王</view>
+                    <view class="replay-text">
+                        <text class="static">回复</text>
+                        <text class="name">福尔摩皮</text>：
+                        <text class="context">福尔摩皮福尔摩皮福尔摩皮福尔摩皮福尔摩皮福尔摩皮福尔摩皮</text>
+                    </view>
+                </view>
+            </view>     
+
+            <view class="replay tc-wrap">
+                <image class="anchor-pic" src="../../img/default.png"></image>
+                <text class="time">2016-06-12 12:45</text>
+                <view class="media-bd">
+                    <view class="name top-name">隔壁老王</view>
+                    <view class="replay-text">
+                        <text class="static">回复</text>
+                        <text class="name">福尔摩皮</text>：
+                        <text class="context">福尔摩皮福尔摩皮福尔摩皮福尔摩皮福尔摩皮福尔摩皮福尔摩皮</text>
+                    </view>
+                </view>
+            </view>                      
+
+        </view>    
+    </view>     
+
+    
 </view>

@@ -1,6 +1,7 @@
 {
   "pages":[
-    "pages/friends_circle/friends_circle"
+    "pages/friends_circle/friends_circle",
+    "pages/detail/detail"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -13,18 +14,7 @@
     "borderStyle" : "white",
     "selectedColor" : "#1d95d4",
     "list" : [
-      {
-        "pagePath": "pages/friends_circle/friends_circle",
-        "text" : "动态"
-      },
-      {
-        "pagePath": "pages/friends_circle/friends_circle",
-        "text" : "发动态"
-      },
-      {
-        "pagePath": "pages/friends_circle/friends_circle",
-        "text" : "我"
-      }
+
     ]
   }
 }

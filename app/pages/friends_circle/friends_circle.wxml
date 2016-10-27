@@ -7,19 +7,18 @@
         <view class="anchor-pic tc-border-box">
             <image src="{{avatarUrl}}"></image>
         </view>
-        <text class="name">广州红馆演唱会</text>
+        <text class="name">{{userName}}</text>
     </view>
 
     <!--内容部分-->
     <view class="tc-panel" style="">
         <!--这是一个列表-->
-        <block wx-if="{{list.length > 0}}" wx:for-index="idx" wx:for-item="itemName" wx:for="{{list}}">
-            <view class="list-wrap tc-wrap"  bindtap="viewTurn">
-                <image class="anchor-pic" src="{{itemName.anchor}}"></image>
+        <block wx:for-index="idx" wx:for-item="itemName" wx:for="{{list}}">
+            <view class="list-wrap tc-wrap">
+                <image class="anchor-pic" src="{{itemName.anchor}}" bindtap="viewTurn"></image>
                 <view class="media-bd">
                     <view class="name">{{itemName.name}}</view>
                     <text class="context">{{itemName.context}}</text>
-                    <!--<view class="pull-down" bindtap="dropDown" wx:if="{{itemName.drop}}">全部</view>-->
                     <view class="pic-wrap tc-clearfix">
                         <block wx:for="{{itemName.pic}}" wx:for-item="pic" >
                             <image src="{{pic}}"  mode="aspectFill" class="pic-item count-{{itemName.pic.length}}"></image>
@@ -37,7 +36,9 @@
                         </view>
                     </view>
                 </view>            
-            </view>        
+            </view> 
+            
+                                    
         </block>
     </view>
 
